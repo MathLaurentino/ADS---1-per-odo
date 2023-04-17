@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{  /* cores do Real Madrid */
+    --darkBlue: #1B4C8C;
+    --blue: #367DD9;
+    --white: #F2F2F2;
+    --orange: #F28705;
+    --darkOrange: #F27405;
+}
+
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+header {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    display: block; /* alterado */
+  }
+
+
+footer{
+    background-color: var(--blue);
+    color: var(--white);
+    border-top: 2px solid black;
+    text-align: center;
+    padding: 40px;
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+/*container*/
+
+.container{
+    background-color: #EEE;
+    min-height: 50vh;
+    padding: 50px;
+}
+
+
+
+/*img-container*/
+.img-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 31%;
+    display: inline-block;
+    margin: 1% 1%;
+    padding: 15px;
+}
+
+.estadio-img{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+
+.texto-img{
+    text-align: justify;
+}
+
+.card h3{
+    color: var(--darkBlue);
+    text-align: center;
+}
+
+/*texto-entrada-container*/
+
+.texto-entrada-container{
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.texto-entrada{
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+/*leia-mais-container*/
+
+.leia-mais-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-leia-mais{
+    margin-left: 4%;
+}
+
+#titulo-leia-mais {
+    margin-left: 2%;
+    padding: 9px;
+}
+
+
+.leia{
+    width: 60%;
+    margin: 1% 1%;
+    padding: 15px;
+}
+
+.leia p{
+    font-size: 20px;
+}
+
+.leia h2{
+    margin-bottom: 18px;
+    color: var(--darkBlue);
+}
+
+
+
+a:hover {
+    color: var(--darkOrange);
+    cursor: pointer;
+}
+
+a{
+    color: var(--darkBlue);
+    text-decoration: none;
+}
+
+/*Imagens*/
+#img1{
+    background-image: url("./img/estadio7.png");
+}
+
+#img2{
+    background-image: url("./img/estadio8.jpg");
+}
+
+#img3{
+    background-image: url("./img/estadio2.jpg");
+}
+
+
+

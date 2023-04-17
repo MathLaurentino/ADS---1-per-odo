@@ -1,0 +1,26 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    /* gap: 1rem; */
+}
+/* 
+#98ff98
+#CCFFFF
+#6E6E6E
+*/
+.cabecalho{
+    background-color: #6E6E6E;
+    color: white;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.esquerda{
+    background-color: #CCFFFF;
+}
+
+.direita{
+    display: grid;
+    background-color: #98ff98;
+    justify-items: center;
+}

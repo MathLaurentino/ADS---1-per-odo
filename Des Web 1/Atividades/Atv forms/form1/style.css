@@ -1,0 +1,42 @@
+.grid{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid green;
+    padding: 20px;
+}
+
+.grid label{
+    justify-self: right;
+}
+
+.formAtv1{
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #9fe9b5;
+}
+
+label{
+    color: darkblue;
+}
+
+.selectUF{
+    width: 80%;
+}
+
+.selectNasc{
+    width: 50%;
+}
+
+.selectEsco{
+    width: 90%;
+}
+
+.enviar{
+    width: 35%;
+}
+
+.labelSituacao{
+    color: black;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <form class="grid">
+
+            <label for="nome">Nome</label>
+                <input id="nome" placeholder="Nome">
+
+            <label for="nome">Email</label>
+                <input id="nome" placeholder="user@example.org">
+
+            <label for="password">Password</label>
+                <input id="password" placeholder="6 caracteres">
+
+            <label>Possui conhecimento?</label>
+                <label>
+                    <input type="checkbox" value="1"> JavaScript
+                    <input type="checkbox" value="1"> HTML
+                    <input type="checkbox" value="1"> CSS
+                </label>   
+        
+            <label>Curso</label>
+                <select name="escolaridade" class="selectEsco">
+                    <option value="selecione"> --Selecione-- </option>
+                    <option value="ads"> Análise e Desenvolvimento </option>
+                    <option value="fisica"> Física </option>
+                    <option value="matematica"> Matemática </option>
+                </select>
+            
+            <label>Turno</label>
+                <label class="labelmassa">
+                    <input type="radio" name="situacao" value="1"> Tarde 
+                    <input type="radio" name="situacao" value="1"> Noite 
+                </label>
+                
+
+
+            <label>Motivo matrícula</label>
+                <textarea rows=""></textarea>
+            
+            <input type="submit" value="enviar" class="enviar">
+                
+        </form>
+    </div>
+
+    
+
+</body>
+</html>

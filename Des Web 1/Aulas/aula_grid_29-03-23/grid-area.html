@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid area</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    .container {
+      display: grid;
+      grid-template-areas: 
+      "HEADER" 
+      "MAIN" 
+      "FOOTER"
+      ;
+      grid-template-columns: 1fr;
+    }
+    header {
+      background-color: #87cefa;
+      grid-area: HEADER;
+    }
+    main {
+      background-color: #90ee90;
+      grid-area: MAIN;
+    }
+    footer {
+      background-color: #f9adb8;
+      grid-area: FOOTER;
+    }
+    header, main, footer { padding: 1rem; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>HEADER</h1>
+  </header>
+  <main>
+    <h2>Conteúdo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A maiores voluptatibus ut, voluptates magnam veritatis tempora nihil quaerat accusantium eos suscipit fugit debitis atque sapiente incidunt deserunt iste velit facere?</p>
+  </main>
+  <footer>
+    <h3>FOOTER</h3>
+  </footer>
+</div>
+
+</body>
+</html>

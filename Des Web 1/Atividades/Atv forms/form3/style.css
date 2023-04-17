@@ -1,0 +1,59 @@
+
+body {
+    background-image: url("./mundo.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.titulo {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    text-align: center;
+    color: rgb(117, 163, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    min-height: 100vh;
+}
+
+.formAtv3 {
+    display: grid;
+    grid-template-columns: min-content 500px;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+    border: 2px solid rgb(117, 163, 216);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0.8;
+}
+
+form input {
+    height: 30px;
+}
+
+form label {
+    justify-self: right;
+}
+
+.telefone {
+    width: fit-content;
+}
+
+.telefone input {
+    width: 40px;
+}
+
+.telefone #numero {
+    width: 100px;
+}
+
+button {
+    grid-column: 2/2;
+    justify-self: left;
+}

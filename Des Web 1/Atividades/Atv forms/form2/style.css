@@ -1,0 +1,20 @@
+.grid{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.grid label{
+    justify-self: right;
+}
+
+.container{
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.enviar{
+    width: 40%;
+}

@@ -1,0 +1,58 @@
+/* exercício 1 */
+
+.body1{
+    background-color: navy;
+}
+
+.ul1{
+    color: red;
+}
+
+.title1{
+    color: white;
+}
+
+/* exercício 2 */
+
+.colorRed{
+    color: red;
+}
+
+.colorBlue{
+    color: blue;
+}
+
+/* exercício 3 */
+
+.body3{
+    background-color: navy;
+}
+
+.text3{
+    color: white;
+}
+
+.textYellow{
+    color: yellow;
+}
+
+/* exercício 4 */
+
+header {
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 200px;
+}
+
+.body4{
+    background-color: #d6d6d6;
+}
+
+.green{
+    color: green;
+}
+
