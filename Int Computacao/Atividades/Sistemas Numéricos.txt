@@ -1,0 +1,214 @@
+		Sistema Binário
+
+1- Converter o binário 11000110 em decimal
+
+	Binário: 11000110 - 8 casas 
+
+	128 - 64 - 32 - 16 - 8 - 4 - 2 - 1
+
+	1   - 1  - 0  - 0  - 0 - 1 - 1 - 0
+
+	128 + 64 + 0  + 0  + 0 + 4 + 2 + 0 = 198
+
+	Decimal: 198
+
+
+2- Converter o binário 1000110110112 em decimal
+
+	Binário: 100011011011 - 12 casas
+
+	2048 - 1024 - 512 - 256 - 128 - 64 - 32 - 16 - 8 - 4 - 2 - 1
+
+	1    - 0    - 0    - 0  - 1   - 1  - 0  - 1  - 1 - 0 - 1 - 1
+
+	2048 + 0    + 0    + 0   + 128 + 64 + 0 + 16 + 8 + 0 + 2 + 1 = 2267
+
+
+3- Qual o peso do MSB (Bit mais significativo) de um número de 12 bits
+
+	2048	
+
+
+4- Qual a faixa total de valores decimais que podemos representar com 8 bits
+	
+	2 elevado a 8 = 256
+
+
+5- Quantos bits são necessários para representar valores decimais de 0 a 12.500
+
+	12.500 | 0
+	6250	 | 0
+	3125	 | 1
+	1562	 | 0	
+	781	 | 1
+	390	 | 0
+	195	 | 1
+	97	 | 1
+	48	 | 0
+	24	 | 0
+	12	 | 0
+	6	 | 0
+	3	 | 1
+	1	 | 1
+
+	Sendo 12.500, em binário, equivalente a: 11000011010100. Logo, por ter 14 bits, 
+	os bits necessarios para representar um número de 0 a 12.500 é de 14 bits
+
+6- Converter o decimal 729 em binário
+
+	729 | 1
+	364 | 0
+	182 | 0
+	91  | 1
+	45  | 1
+	22  | 0
+	11  | 1
+	5   | 1
+	2   | 0
+	1   | 1
+	
+	Portanto, em binário, 729 é igual a 1011011001.
+
+7- Converter o decimal 37810 em um número binário de 16 bits.
+
+	378 | 0
+	189 | 1
+	94  | 0
+	47  | 1
+	23  | 1
+	11  | 1
+	5   | 1
+	2   | 0
+	1   | 1
+
+	Portanto, em binário, 378 é igual a 101111010.
+
+
+
+		Sistema Octal e Hexadecimal
+
+
+1- Converter o hexadecimal B2F em um número binário e depois também em decimal e octal;
+
+	Hexadecimal: B2F
+
+		B 	2 	F 
+     		/	|	 \
+   	     1011    0010   1111
+
+
+	Binário: 101100101111 - 12 casas
+
+		2048 - 1024 - 512 - 256 - 128 - 64 - 32 - 16 - 8 - 4 - 2 - 1
+
+		1    - 0    - 1    - 1  - 0   - 0  - 1  - 0  - 1 - 1 - 1 - 1
+
+		2024 + 0    + 512 + 256 + 0   + 0  + 32 + 0  + 8 + 4 + 2 + 1 = 2859
+
+	Decimal: 2859
+
+	Binário para Octal:
+		
+		101 100 101 111
+		 |   |   |   |
+		 5   4   5   7
+
+	Octal: 5457
+
+
+2- Converter o decimal 423 em hexadecimal e octal
+
+	Decimal: 423
+		para hexadecimal (dividindo por 16):
+		
+		423 | 7
+		26  | 10 = A
+		1   | 1
+		0   |
+
+		portanto, 423 em Hexadecimal é igual a 1A7 
+
+	Hexadecimal: 1A7
+
+		para Octal (dividindo por 8):
+
+		423 | 7 
+		52  | 4
+		6   | 6
+		0   |
+
+		Portanto, 423 em octal é igual a 647.
+
+	Octal: 647
+
+
+3- Converter o decimal 214 em hexadecimal e octal
+
+	Decimal: 214
+		para hexadecimal (dividindo por 16):
+		
+		214 | 6
+ 		13  | 13 = D
+  		0   |
+
+		portanto, 214 em Hexadecimal é igual a D6 
+
+	Hexadecimal: D6
+
+		para Octal (dividindo por 8):
+
+		214 | 6
+ 		26  | 2
+  		3   | 3
+		0   |
+
+		Portanto, 214 em octal é igual a 326.
+
+	Octal: 26
+
+
+4- Um endereço IP é formado por 32 bits representado por quatro bytes em decimal. Portanto, converter o endereço IP 192.168.40.222 em um binário de 32 bits.
+
+	Decimal: 192       168        40        222
+	          |         |          |         |
+	          V         V          V         V
+	Binário: 11000000 10101000  00101000  11011110
+			11000000101010000010100011011110
+
+
+5-Converter a máscara de rede de um endereço IP 255.255.248.0 em um binário de 32 bits.
+
+	Hexadecimal: 255       255        248        0
+			  |         |          |         |
+	         	  V         V          V         V
+	Binário:   11111111 11111111  11111000  00000000
+			11111111111111111111100000000000
+
+
+6- Um endereço físico de uma placa de rede é formado por 6 bytes hexadecimal. Portanto, converta o endereço físico 10:1f:74:40:ec:ee em binário. Responda quantos bits tem o endereço.
+
+	Hexadecimal: 10        1f        74        40        ec        ee
+	              |         |         |         |         |         |
+	              V         V         V         V         V         V
+	Binário:     00010000  00011111  01110100  01000000  11101100  11101110
+				000100000001111101110100010000001110110011101110
+
+	O endereço possui 6 bytes, que juntos totalizam 48 bits.
+ 
+
+
+
+
+
+
+
+
+
+	
+	
+
+	
+
+	
+
+	
