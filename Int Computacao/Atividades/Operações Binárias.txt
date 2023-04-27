@@ -1,0 +1,36 @@
+	Soma
+
+1- Efetue a soma dos seguintes pares de números binários:
+
+	a) 10110 + 00111
+		10110
+	    + 00111
+		-----
+		11101
+
+	b) 011101 + 010010
+		011101
+	    + 010010
+		------
+		101111
+
+	c) 10001111 + 00000001
+		10001111
+	    + 00000001
+		--------
+		10010000
+
+
+	Subtração
+
+1- Efetue a subtração dos seguintes pares de números binários:
+
+	a) 101101 - 010010
+		101101
+	    - 010010
+		------
+		011011
+
+	
+2- Converta os pares números decimais em binário e efetue as operações:
+		
