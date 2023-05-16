@@ -1,0 +1,98 @@
+Exercícos para Entrega:
+
+    - Soma e Subtração de binários
+
+        Converta os pares números decimais em binário e efetue as operações:
+
+            1- 85 + 73
+
+                85|1                        73|1
+                42|0                        36|0
+                21|1                        18|0
+                10|0                        09|1
+                05|1                        04|0
+                02|0                        02|0
+                01|1                        01|1
+                00| -> 85 = 1010101         00| -> 73 = 1001001
+
+                1010101
+               +1001001
+               ---------
+               10011110
+
+
+            2- 233 + 120
+
+                233 = 11101001
+                120 = 01111000
+
+                11101001
+               +01111000
+               ----------
+               101100001
+
+
+            3- 233 - 120
+
+                233 = 11101001
+                120 = 01111000
+
+                11101001
+               -01111000
+               ----------
+                01110001
+
+
+            4- 255 - 127
+            
+                255 = 11111111
+                127 = 01111111
+                
+                11111111
+               -01111111
+               ----------
+                10000000
+
+            5- 128 - 15
+
+                128 = 10000000
+                015 = 1111
+
+                10000000
+               -00001111
+               ----------
+               1
+
+
+
+
+Exercícios feitos em sala: 
+
+    - Números positivos e negativos
+
+        1- Represente os números decimais com sinal como números binários com sinal no sistema 
+           de complemento de 2, usando um total de 8 bits (bit de sinal + 7 bits de magnitude):
+
+            +3:
+                00000011
+
+            -2:
+                00000010 -> inverte os bits -> 11111101 -> +1 -> 11111110
+
+            +8:
+                00001000
+
+            -8: 
+                00001000 -> inverte os bits -> 11110111 -> +1 -> 11111000
+
+            +56
+                00111000
+
+            -100
+                01100100 -> inverte os bits -> 10011011 -> +1 -> 10011100
+        
+        2- Efetue a subtração dos seguintes pares de números binários positivos, usando complemento de 2. Converter o resultado para decimal, indicando se é positivo ou negativo:
+            (00101101) - (00010010) -> números de 8 bits: sinal + magnitude
+            (00010010) - (00101101) -> números de 8 bits: sinal + magnitude
+            (000010001011) - (000000110101) -> números de 12 bits: sinal + magnitude
+            (000101011101) - (000011100110) -> números de 12 bits: sinal + magnitude
