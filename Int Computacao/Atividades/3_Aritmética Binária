@@ -1,5 +1,6 @@
 Exercícos para Entrega:
 
+
     - Soma e Subtração de binários
 
         Converta os pares números decimais em binário e efetue as operações:
@@ -61,7 +62,155 @@ Exercícos para Entrega:
                 10000000
                -00001111
                ----------
-               1
+                 1110001
+
+
+
+    - Multiplicação de binários
+
+        Converta os pares números decimais em binário e efetue as operações:
+
+            1- 12 * 10
+
+                12 = 1100  /  10 = 1010
+
+                1100
+               x1010
+            ------------
+                0000
+               1100
+              0000
+             1100 
+            ------------
+             1111000
+
+            2- 170 * 31
+
+                170 = 10101010  /  31 = 11111
+
+                10101010
+               x   11111
+            ---------------
+                 10101010
+                10101010
+               10101010
+              10101010
+             10101010
+            ---------------
+            1010010010110 
+
+
+            3- 170 * 128
+
+                170 = 10101010  /  128 = 10000000
+
+                10101010
+               x10000000
+            ---------------
+                    00000000
+                   00000000
+                  00000000
+                 00000000
+                00000000
+               00000000
+              00000000
+             10101010
+            --------------
+             101010100000000
+
+
+
+    - Divisão de binários
+
+        Converta os números decimais em binário a faça as divisões:
+
+            1- 70 : 5
+
+                70 = 1000110  /  5 = 101 
+
+                1000110 | 101
+                 101||| | 1110
+                ----|||
+                00111||
+                  101||
+                -----||
+                  0101|
+                   101|
+                ------|
+                  00000
+                    000
+
+            2- 54 : 9
+
+                54 = 110110  /  9 = 1001 
+
+                110110 | 1001
+                1001|| | 110
+                ----||
+                01001|
+                 1001|
+                -----|
+                 00000
+                  0000
+
+            3- 40 : 16
+
+                40 = 101000  /  16 = 10000 
+
+                101000 | 10000
+                10000| | 10,1
+                -----|
+                001000
+                  0000
+                ------
+                  10000
+                  10000
+                ------
+                  00000
+
+            4- 60 : 16
+        
+                60 = 111100  /  16 = 10000
+                
+                111100 | 10000
+                10000| | 11,11
+                -----|
+                011100
+                 10000
+                ---------
+                 011000
+                  10000
+                ---------
+                  010000
+                   10000
+                ---------
+                   00000
+
+
+    - Binários negativos
+
+        Converta os números decimais em binário de 8 bits, com sinal, e realize as operações indicadas usando soma, usando complemento de 2 para representar os negativos. Converter o resultado para decimal, indicando se é positivo ou negativo:
+
+            1- 55 - 77
+
+                55 = 110111  /  77 = 1001101
+
+                1001101
+                -110111
+                -------
+                0010110 = 22
+
+                10110 -> complemento de 1 -> 01001 -> mais 1 -> 01010 -> 8 bits com sital negativo -> 10001010
+
+            2- (-43) - 61
+
+                61 = 00111101  /  43 = 101011 
+
+                101011 -> complemento de 1 -> 010100 -> mais 1 -> 010110 -> 8 bits com sital negativo -> 10010110
+
+            3- (-15) - 28
+
+                  
 
 
 
