@@ -1,18 +1,21 @@
-const arrColors = document.querySelectorAll(".cores");
+$(".cores").on("mouseover", function(){
+    changeBackground(this.id);
+});
 
-for(let x=0; x < arrColors.length; x++){
-    console.log(arrColors);
-    arrColors[x].addEventListener("mouseover", function(){
-        changeColor(this.id);
-    });
+$(".cores").on("mouseout", function(){
+    whiteBackground(this.id);
+});
+
+const arrDivs = $(".componente");
+
+function changeBackground(colorId){
+    colors = ["red", "yellow", "green", "blue"];
+    divId = Number(colorId) + 2;
+    arrDivs[divId].style.backgroundColor = colors[colorId];
 }
 
-function changeColor(color){
-    alert(color);
-
-
-
-    if (color === "red"){
-
-    }
+function whiteBackground(colorId){
+    divId = Number(colorId) + 2;
+    arrDivs[divId].style.backgroundColor = "white"
 }
+

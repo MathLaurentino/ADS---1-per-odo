@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    
+}
+
+.result{
+    display: flex;
+    margin-left: 5px;
+    width: 100px;
+    background-color: gray;
+    text-align: center;
+}
+
+label, input{
+    margin-left: 5px;
+
+}

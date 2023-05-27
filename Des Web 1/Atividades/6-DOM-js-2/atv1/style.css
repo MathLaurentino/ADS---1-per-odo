@@ -1,5 +1,48 @@
-.divColor{
-    width: 100px;
-    height: 100px;
-    color: aqua;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.componente {
+    border: 1px solid black;
+    padding: 10px;
+    justify-content: center;
+}
+
+.cores {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cores:nth-child(1) {
+    background-color: red;
+}
+
+.cores:nth-child(2) {
+    background-color: yellow;
+}
+
+.cores:nth-child(3) {
+    background-color: green;
+}
+
+.cores:nth-child(4) {
+    background-color: blue;
 }
