@@ -1,9 +1,9 @@
 $("#submit").on("click", function(){
-    calculoPreco(this.id);
+    calculoPreco();
 });
 
 
-function calculoPreco(colorId){
+function calculoPreco(){
         const valor = $("#valor").val();
         const quantidade = $("#quantidade").val()
         const labelPreco = $("#preco");
