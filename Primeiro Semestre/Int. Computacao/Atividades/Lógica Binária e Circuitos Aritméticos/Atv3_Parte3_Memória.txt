@@ -1,0 +1,12 @@
+1-Determinada memória tem capacidad de 16k x 8 bits:
+
+    a) Quantas linhas de entrada/saída de dados tem esta memória;
+
+        O número de linhas de entrada/saída de dados = Capacidade em bits, logo:
+        16k linhas de entrada/saída de dados
+        
+    b) Quantas linhas de endereço ela tem?
+
+    c) Qual a capacidade em Bytes?
+
+2-Quantas entradas de endereço, entrada e saída de dados são necessárias para uma memória de 1M Bytes?
