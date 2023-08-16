@@ -16,11 +16,6 @@ public class SistemaEscolar {
         se.escola = new Escola();
         se.reader = new BufferedReader(new InputStreamReader(System.in));
 
-        // System.out.println("Nome da turma:");
-        // se.escola.setNome(Integer.parseInt(se.reader.readLine()));
-
-        // System.out.println("Telefone:");
-        // se.escola.setFone(se.reader.readLine());
         se.menu();
     }
 
@@ -118,16 +113,19 @@ public class SistemaEscolar {
 
     private void consultarTurma() throws Exception {
 
-        for(int i = 0; i< this.escola.getQtdeTurma(); i++){
+
+
+        for (int i = 0; i < this.escola.getQtdeTurma(); i++) {
             Turma t = this.escola.getTurma(i);
-            if(t.getNumeroTurma() == numTurma){
+            if (t.getNumeroTurma() == numTurma) {
                 System.out.println("[Alunos da turma]");
                 int posAluno = 0;
-                while(t.getAluno(posAluno) != null){
+                while (t.getAluno(posAluno) != null) {
                     String linha = "Nome: " + t.getAluno(posAluno).getNome();
                     linha += " - Matricula: " + t.getAluno(posAluno).getMatricula();
                     linha += " - Media: " + t.getAluno(posAluno).calcularMedia();
-                   
+                    System.out.println(linha);
+                    posAluno++;
                 }
             }
         }
