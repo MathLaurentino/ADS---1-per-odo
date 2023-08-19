@@ -7,7 +7,7 @@ public class Companhia {
     private Voo[] voos;
     
     // Construtor
-    public Companhia(String nome) {
+    public Companhia() {
         this.quantidadeVoos = 0;
         this.voos = new Voo[40];
     }

@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 public class Voo {
 
-    private String numeroVoo;
+    private int numeroVoo;
     private String destino;
     private int quantidadePassageiros;
     private Passageiro[] passageiros;
@@ -12,12 +14,11 @@ public class Voo {
         this.passageiros = new Passageiro[40];
     }
 
-    
     // Getters and Setters
-    public String getNumeroVoo() {
+    public int getNumeroVoo() {
         return numeroVoo;
     }
-    public void setNumeroVoo(String numeroVoo) {
+    public void setNumeroVoo(int numeroVoo) {
         this.numeroVoo = numeroVoo;
     }
 
@@ -42,5 +43,10 @@ public class Voo {
         return this.quantidadePassageiros;
     }
     
+    @Override
+    public String toString() {
+        return "Voo [numeroVoo=" + numeroVoo + ", destino=" + destino + ", quantidadePassageiros="
+                + quantidadePassageiros + ", passageiros=" + Arrays.toString(passageiros) + "]";
+    }
 }
 

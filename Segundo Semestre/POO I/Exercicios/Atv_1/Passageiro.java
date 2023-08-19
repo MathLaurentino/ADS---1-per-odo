@@ -2,15 +2,7 @@ public class Passageiro {
     private String nome;
     private String sobrenome;
     private int idade;
-    private String numeroPassaporte;
-
-    // Construtor
-    public Passageiro(String nome, String sobrenome, int idade, String numeroPassaporte) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.idade = idade;
-        this.numeroPassaporte = numeroPassaporte;
-    }
+    private int numeroPassaporte;
 
     // Getters e Setters
     public String getNome() {
@@ -35,10 +27,10 @@ public class Passageiro {
         this.idade = idade;
     }
 
-    public String getNumeroPassaporte() {
+    public int getNumeroPassaporte() {
         return numeroPassaporte;
     }
-    public void setNumeroPassaporte(String numeroPassaporte) {
+    public void setNumeroPassaporte(int numeroPassaporte) {
         this.numeroPassaporte = numeroPassaporte;
     }
 
