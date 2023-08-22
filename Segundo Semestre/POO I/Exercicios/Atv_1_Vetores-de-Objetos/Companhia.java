@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
 public class Companhia {
-
-    private String nome;       
+     
     private int quantidadeVoos;
     private Voo[] voos;
     
@@ -11,17 +10,7 @@ public class Companhia {
         this.quantidadeVoos = 0;
         this.voos = new Voo[40];
     }
-
-
-    // Getters and Setters
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
     
-
     public Voo getVoo(int pos){
         return this.voos[pos];
     }
