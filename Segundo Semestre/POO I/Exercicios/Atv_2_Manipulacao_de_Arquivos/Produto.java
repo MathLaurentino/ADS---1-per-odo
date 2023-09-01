@@ -23,12 +23,7 @@ public class Produto {
         return precoVenda;
     }
     public void setPrecoVenda(double precoVenda, double margemLucro) {
-        this.precoVenda = precoVenda * (1 + margemLucro / 100);
+        this.precoVenda = precoVenda * (1 + (margemLucro / 100));
     }
-
-    @Override
-    public String toString() {
-        return "PrecoVenda [codigo=" + codigo + ", nomeProduto=" + nomeProduto + ", precoVenda=" + precoVenda + "]";
-    } 
 
 }
