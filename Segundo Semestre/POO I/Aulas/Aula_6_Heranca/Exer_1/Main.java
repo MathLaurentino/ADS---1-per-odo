@@ -42,6 +42,8 @@ public class Main {
             }
 
         }
+
+        this.reader.close();
     }
 
     private void cadastrarCliente() throws Exception {
@@ -87,12 +89,20 @@ public class Main {
         System.out.println("Area Atuacao: ");
         gerente.setAreaAtuacao(this.reader.readLine());
 
+        System.out.println("Salario: ");
+        gerente.setSalario(Float.parseFloat(this.reader.readLine()));
+
+        System.out.println("Horario de Trabalho: ");
+        gerente.setHorarioTrabalho(this.reader.readLine());
+
         System.out.println("\n-- DADOS CADASTRADOS --");
         System.out.println("Nome: " + gerente.getNome());
         System.out.println("Idade: " + gerente.getIdade());
         System.out.println("Ano contratacao: " + gerente.getAnoContratacao());    
         System.out.println("Formacao academica: " + gerente.getFormacaoAcademica());
         System.out.println("Area Atuacao: " + gerente.getAreaAtuacao());
+        System.out.println("Salario: " + gerente.getSalario());
+        System.out.println("Horario de Trabalho: " + gerente.getHorarioTrabalho());
     }
 
     private void cadastrarVendedor() throws Exception {
@@ -150,11 +160,11 @@ public class Main {
         System.out.println("Ano contratacao: ");
         caixa.setAnoContratacao(Integer.parseInt(this.reader.readLine()));
 
-        System.out.println("Horario de trabalho: ");
-        caixa.setHorarioTrabalho(this.reader.readLine());
-
         System.out.println("Numero do caixa de atuacao: ");
         caixa.setCaixaAtuacao(Integer.parseInt(this.reader.readLine()));
+
+        System.out.println("Horario de trabalho: ");
+        caixa.setHorarioTrabalho(this.reader.readLine());
 
         System.out.println("\n-- DADOS CADASTRADOS --");
         System.out.println("Nome: " + caixa.getNome());

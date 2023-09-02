@@ -1,8 +1,7 @@
-public class Gerente extends Pessoa {
+public class Gerente extends Funcionario {
 
     private String formacaoAcademica;
     private String areaAtuacao;
-    private int anoContratacao;
 
     public String getFormacaoAcademica() {
         return formacaoAcademica;
@@ -16,13 +15,6 @@ public class Gerente extends Pessoa {
     }
     public void setAreaAtuacao(String areaAtuacao) {
         this.areaAtuacao = areaAtuacao;
-    }
-   
-    public int getAnoContratacao() {
-        return anoContratacao;
-    }
-    public void setAnoContratacao(int anoContratacao) {
-        this.anoContratacao = anoContratacao;
     }
     
 }
