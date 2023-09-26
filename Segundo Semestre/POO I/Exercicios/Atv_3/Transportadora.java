@@ -7,7 +7,7 @@ public class Transportadora implements ImportacaoArquivos{
     private EncomendaNormal[] arrayNormal = new EncomendaNormal[1000];
     private EncomendaExpressa[] arrayExpressa = new EncomendaExpressa[1000];
 
-    // Contadores para acompanhar a quantidade de encomendas normais e expressas
+    // Contadores para acompanhar a quantidade de encomendas normais e expressas no sistema
     private int qtNormal = 0;
     private int qtExpressa = 0;
 
@@ -18,9 +18,7 @@ public class Transportadora implements ImportacaoArquivos{
 
     /**
      * Carrega as configurações da transportadora a partir de um arquivo CSV.
-     *
      * @param arqConfig Nome do arquivo de configuração (sem extensão) contendo as informações.
-     * @throws Exception Se ocorrer um erro durante a leitura do arquivo.
      */
     public void carregarConfiguracoes(String arqConfig) throws Exception { 
 
@@ -31,20 +29,20 @@ public class Transportadora implements ImportacaoArquivos{
         String linha;
         while ((linha = readerFile.readLine()) != null) {
             String[] array = linha.split(";");
-            if (array[1] == "EN") 
+            if (array[1].equals("EN")) 
                 taxaNormal = Float.parseFloat(array[2]);
-            else if (array[1] == "EE")
+            else if (array[1].equals("EE"))
                 taxaExpressa = Float.parseFloat(array[2]);
         }
+
+        readerFile.close();
 
     }
 
 
     /**
      * Importa os dados de encomendas a partir de um arquivo CSV.
-     *
      * @param arqDadosEntrada Nome do arquivo de dados de entrada (sem extensão) contendo as informações das encomendas.
-     * @throws Exception Se ocorrer um erro durante a leitura do arquivo.
      */
     public void importarDados(String arqDadosEntrada) throws Exception {
 
@@ -58,24 +56,27 @@ public class Transportadora implements ImportacaoArquivos{
             String[] encomenda = linha.split(";");
             importarEncomenda(encomenda); 
         }
+
+        readerFile.close();
+
     }
 
 
     /**
      * Cria uma instancia de EncomendaNormal ou EncomendaExpressa e chama o
      * metodo de adição ao arrayNormal ou arrayExpresso.
-     *
      * @param encomenda Array de strings contendo informações da encomenda.
      */
     private void importarEncomenda(String[] encomenda) {
 
-        if (encomenda[2] == "EN") {
+        if (encomenda[2].equals("EN")) {
             EncomendaNormal encomendaNormal = new EncomendaNormal();
             encomendaNormal.setNumPedido(Integer.parseInt(encomenda[0]));
             encomendaNormal.setDataPostagem(encomenda[1]);
             encomendaNormal.setPeso(Float.parseFloat(encomenda[4])); 
             this.addNormal(encomendaNormal);
-        } else if (encomenda[2] == "EE") {
+        } 
+        else if (encomenda[2].equals("EE")) {
             EncomendaExpressa encomendaExpressa = new EncomendaExpressa();
             encomendaExpressa.setNumPedido(Integer.parseInt(encomenda[0]));
             encomendaExpressa.setDataPostagem(encomenda[1]);
@@ -89,7 +90,6 @@ public class Transportadora implements ImportacaoArquivos{
 
     /**
      * Adiciona uma encomenda do tipo normal ao array de encomendas normais.
-     *
      * @param encomendaNormal A encomenda normal a ser adicionada.
      */
     private void addNormal(EncomendaNormal encomendaNormal) {
@@ -104,7 +104,6 @@ public class Transportadora implements ImportacaoArquivos{
 
     /**
      * Adiciona uma encomenda do tipo expressa ao array de encomendas expressas.
-     *
      * @param encomendaExpressa A encomenda expressa a ser adicionada.
      */
     private void addExpressa(EncomendaExpressa encomendaExpressa) {
@@ -118,7 +117,6 @@ public class Transportadora implements ImportacaoArquivos{
 
 
     // GETTERS //
-
     public EncomendaNormal[] getArrayEncomendaNormal() {
         return arrayNormal;
     }
@@ -131,6 +129,13 @@ public class Transportadora implements ImportacaoArquivos{
     }
     public float getTaxaExpressa() {
         return taxaExpressa;
+    }
+
+    public int getQtNormal() {
+        return qtNormal;
+    }
+    public int getQtExpressa() {
+        return qtExpressa;
     }
        
 }
