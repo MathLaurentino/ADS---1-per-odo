@@ -14,6 +14,12 @@ public class Main {
         Main main = new Main();
         main.reader = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println(
+            "---- ! ATENCAO ! ----\n" + 
+            "1 - Ao informar nomes de arquivos não coloque a extencao!\n" + 
+            "2 - Todos os arquivos devem estar na pasta 'files'!"
+        );
+        
         //Carrega as configurações
         main.transportadora = new Transportadora();
         main.carregarConfiguracoes();
@@ -56,15 +62,38 @@ public class Main {
 
 
     private void carregarConfiguracoes() throws Exception {
-        System.out.println("Informe o nome do arquivo de Configuracao:");
-        String nomeArquivoConfig = this.reader.readLine();
+
+        boolean arqExiste;
+        String nomeArquivoConfig;
+
+        do {
+            System.out.println("Informe o nome do arquivo de Configuracao:");
+            nomeArquivoConfig = this.reader.readLine();
+
+            arqExiste = VerificadorDeArquivo.verificarSeArquivoExiste("files/" + nomeArquivoConfig + ".csv");
+            if (!arqExiste) {
+                System.out.println("Aquivo não existe!");
+            }
+        } while (arqExiste != true);
+
         this.transportadora.carregarConfiguracoes(nomeArquivoConfig);
     }
 
 
     private void importarArquivoDeEcomenda() throws Exception{
-        System.out.println("Informe o nome do arquivo de Encomendas:");
-        String nomeArquivoEncomenda = this.reader.readLine();
+
+        boolean arqExiste;
+        String nomeArquivoEncomenda;
+
+        do {
+            System.out.println("Informe o nome do arquivo de Encomendas:");
+            nomeArquivoEncomenda = this.reader.readLine();
+
+            arqExiste = VerificadorDeArquivo.verificarSeArquivoExiste("files/" + nomeArquivoEncomenda + ".csv");
+            if (!arqExiste) {
+                System.out.println("Aquivo não existe!");
+            }
+        } while (arqExiste != true);
 
         this.transportadora.importarDados(nomeArquivoEncomenda);
     }
