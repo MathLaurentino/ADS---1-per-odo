@@ -6,6 +6,10 @@ class Curso {
     private ?string $nome;
     private ?string $turno;
 
+    public function __toString()
+    {
+        return $this->nome;
+    }
     
     //-- GETTERS AND SETTERS --//
 
@@ -26,6 +30,17 @@ class Curso {
     public function setTurno($turno)
     {
         $this->turno = $turno;
+        return $this;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+
         return $this;
     }
 }
