@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Transportadora implements ImportacaoArquivos{
 
@@ -122,6 +124,17 @@ public class Transportadora implements ImportacaoArquivos{
     }
     public EncomendaExpressa[] getArrayEncomendaExpressa() {
         return arrayExpressa;
+    }
+
+    public List<EncomendaExpressa> getEncomendasPrazo(int prazo) {
+        List<EncomendaExpressa> encomendas = new ArrayList<>();
+        for (int i = 0; i < qtExpressa; i++) {
+            EncomendaExpressa encomenda = arrayExpressa[i];
+            if (encomenda.getPrazoDeEntrega() <= prazo) {
+                encomendas.add(encomenda);
+            } 
+        }
+        return encomendas;
     }
 
     public float getTaxaNormal() {
