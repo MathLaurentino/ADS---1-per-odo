@@ -18,6 +18,22 @@ class AlunoDAO {
     }
 
 
+    public function insert(Aluno $aluno)
+    {
+        $conn = Connection::getConnection();
+        
+        $sql = "INSERT INTO alunos (nome, idade, estrangeiro, id_curso) VALUES (?,?,?,?)";
+        $stm = $conn->prepare($sql);    
+        $stm->execute(array(
+                $aluno->getNome(), 
+                $aluno->getIdade(), 
+                $aluno->getEstrangeiro(),
+                $aluno->getCurso()->getId()
+            )
+        );
+    }
+
+
     private function mapDbBtoObject(array $data) 
     {
         $alunos = array();
