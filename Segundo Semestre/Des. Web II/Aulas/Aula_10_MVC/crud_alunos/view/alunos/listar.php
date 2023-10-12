@@ -22,8 +22,8 @@
             <td>Idade</td>
             <td>Estrangeiro</td>
             <td>Curso</td>
-            <td></td>
-            <td></td>
+            <td>Alterar</td>
+            <td>Excluir</td>
         </tr>
     </thead>
 
@@ -35,8 +35,16 @@
                 <td><?= $a->getIdade(); ?></td>
                 <td><?= $a->getEstrangeiroDesc($a->getEstrangeiro()); ?></td>
                 <td><?= $a->getCurso(); ?></td>
-                <td></td>
-                <td></td>
+                <td> 
+                    <a href="alterar.php?id=<?= $a->getId() ?>">
+                        <img src="../../img/btn_editar.png">
+                    </a> 
+                </td>
+                <td> 
+                    <a href="excluir.php?id=<?= $a->getId() ?>">
+                        <img src="../../img/btn_excluir.png">
+                    </a> 
+                </td>            
             </tr>
         <?php endforeach; ?>
     </tbody>

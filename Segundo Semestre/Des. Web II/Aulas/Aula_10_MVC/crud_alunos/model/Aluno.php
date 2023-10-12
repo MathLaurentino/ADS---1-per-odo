@@ -82,6 +82,12 @@ class Aluno {
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return "Nome: " . $this->nome . " Idade:" . $this->idade . " Estrangeiro: " . $this->estrangeiro;
+    }
+
 }
 
 ?>

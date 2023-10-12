@@ -26,10 +26,20 @@ class AlunoController {
     public function inserir(Aluno $aluno)
     {
         $erros = $this->alunoService->validarDados($aluno);
+        if (empty($erros)) {
+            $this->alunoDAO->insert($aluno);
+        }
         return $erros;
-    //     if ($erros) {
-    //         $this->alunoDAO->insert($aluno);
-    //     }
+    }
+
+    public function buscarPorId(int $idAluno)
+    {
+        return $this->alunoDAO->getById($idAluno);
+    }
+
+    public function excluirPorId(int $idAluno)
+    {
+        $this->alunoDAO->deleteById($idAluno);
     }
 
 }
