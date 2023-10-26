@@ -14,6 +14,7 @@ class Aluno {
     public function __construct()
     {
         $this->curso = null;
+        $this->id = 0;
     }
 
     public function getEstrangeiroDesc() 

@@ -32,6 +32,15 @@ class AlunoController {
         return $erros;
     }
 
+    public function alterar(Aluno $aluno)
+    {
+        $erros = $this->alunoService->validarDados($aluno);
+        if (empty($erros)) {
+            $this->alunoDAO->update($aluno);
+        }
+        return $erros;
+    }
+
     public function buscarPorId(int $idAluno)
     {
         return $this->alunoDAO->getById($idAluno);

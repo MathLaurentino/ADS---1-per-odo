@@ -12,6 +12,9 @@ class AlunoService {
         if (!$aluno->getIdade()) {
             array_push($erros, "Informe a idade!");
         }
+        if (!$aluno->getIdade() >= 15) {
+            array_push($erros, "O aluno deve ter no mínimo 15 anos!");
+        }
         if (!$aluno->getEstrangeiro()) {
             array_push($erros, "Informe se o aluno é estrangeiro!");
         }

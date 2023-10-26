@@ -60,6 +60,7 @@
         </select>
     </div>
     
+    <input type="hidden" name="id" value="<?= ($aluno && $aluno->getId() > 0) ? $aluno->getId() : null ?>">
     <input type="hidden" name="submetido" value="1">
 
     <button type="submit">Gravar</button>

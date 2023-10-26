@@ -54,6 +54,26 @@ class AlunoDAO {
     }
 
 
+    public function update(Aluno $aluno) 
+    {
+        $conn = Connection::getConnection();
+        
+        $sql = "UPDATE alunos SET nome = ?, idade = ?," . 
+                " estrangeiro = ?, id_curso = ?" . 
+                " WHERE id = ?";
+        
+        $stm = $conn->prepare($sql);    
+        $stm->execute(array(
+                $aluno->getNome(), 
+                $aluno->getIdade(), 
+                $aluno->getEstrangeiro(),
+                $aluno->getCurso()->getId(),
+                $aluno->getId()
+            )
+        );
+    }
+
+
     public function deleteById(int $idAluno)
     {
         $conn = Connection::getConnection();
