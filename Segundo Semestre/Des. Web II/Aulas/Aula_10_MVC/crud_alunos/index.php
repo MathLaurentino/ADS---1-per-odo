@@ -1,47 +1,21 @@
-<?php
+<?php include_once(__DIR__ . "/view/include/header.php"); ?>
 
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Olá, mundo!</title>
-  </head>
-  <body>
-
-    <div class="container">
-        <h1>Olá, mundo!</h1>
-        
-        <div class="row">
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="alert alert-primary"> Coluna 1 </div>
+<div class="row mt-3 justify-content-center">
+    <div class="col-3">
+        <div class="card text-center">
+            <img class="card-image-top mx-auto" src="<?= URL_BASE ?>/img/card_alunos.png" style="max-width: 200px; height: auto;" />
+            <div class="card-body">
+                <h5 class="card-title">Alunos</h5>
             </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="alert alert-primary"> Coluna 2 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12 col-sm-6">
-                <div class="alert alert-primary"> Coluna 3 </div>
-            </div>
-
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="<?= LISTAGEM_ALUNOS ?>" class="card-link">
+                        Listagem de Alunos</a>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-</html>
+
+<?php include_once(__DIR__ . "/view/include/footer.php"); ?>

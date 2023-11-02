@@ -11,19 +11,19 @@
 <h3>Listagem de alunos</h3>
 
 <div>
-    <a href="inserir.php">Inserir</a>
+    <a href="inserir.php"  class="btn btn-success">Inserir</a>
 </div>
 
-<table border="1">
+<table border="1" class="table table-striped table-hover mt-2">
     <thead>
         <tr>
-            <td>ID</td>
-            <td>Nome</td>
-            <td>Idade</td>
-            <td>Estrangeiro</td>
-            <td>Curso</td>
-            <td>Alterar</td>
-            <td>Excluir</td>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Estrangeiro</th>
+            <th>Curso</th>
+            <th>Alterar</th>
+            <th>Excluir</th>
         </tr>
     </thead>
 
