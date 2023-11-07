@@ -32,13 +32,13 @@
                     <td><?= $j->getPosicao()?></td>
                     <td><?= $j->getTime() ?>
                     <td>
-                        <a href="excluir.php?id=<?= $j->getId() ?>">
-                            <img src="../../img/btn_excluir.png">
+                        <a href="excluir.php?id=<?= $j->getId() ?>" onclick="return confirm('Deseja realmente excluir o jogador?')">
+                            <img src="<?= BASE_URL ?>/img/btn_excluir.png">
                         </a> 
                     </td>
                     <td>
                         <a href="alterar.php?id=<?= $j->getId() ?>">
-                            <img src="../../img/btn_editar.png">
+                            <img src="<?= BASE_URL ?>/img/btn_editar.png">
                         </a> 
                     </td>
                 </tr>

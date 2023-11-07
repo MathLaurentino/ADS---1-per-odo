@@ -11,11 +11,11 @@ class JogadorService{
         if (!$jogador->getIdade()) {
             array_push($erros, "Informe a idade!");
         }
-        if (!$jogador->getTime()) {
-            array_push($erros, "Informe o time do jogador");
-        }
         if (!$jogador->getPosicao()) {
-            array_push($erros, "Informe a posição do jogador");
+            array_push($erros, "Informe a posição!");
+        }
+        if (!$jogador->getTime()) {
+            array_push($erros, "Informe o time!");
         }
         
         return $erros;

@@ -13,6 +13,7 @@ if (isset($_POST["submetido"])) {
     $fk_posicao = is_numeric($_POST["posicao"])? $_POST["posicao"] : null;
 
     $jogador = new Jogador();  
+    $jogador->setId($id);
     $jogador->setIdade($idade);
     $jogador->setNome($nome);
 

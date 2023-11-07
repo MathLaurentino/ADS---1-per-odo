@@ -4,13 +4,13 @@
 <div class="row mt-3 justify-content-center">
   <div class="col-3">
     <div class="card text-center">
-      <img class="card-image-top mx-auto" src="<?=BASE_URL?>/img/img_jogador.png" style="max-width: 200px; height: auto;" />
+      <img class="card-image-top mx-auto" src="<?= BASE_URL ?>/img/img_jogador.png" style="max-width: 200px; height: auto;" />
       <div class="card-body">
         <h5 class="card-title">Jogadores</h5>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <a href="<?=LISTAGEM_JOGADORES?>" class="card-link">
+          <a href="<?= LISTAGEM_JOGADORES ?>" class="card-link">
             Listagem de Jogadores</a>
         </li>
       </ul>

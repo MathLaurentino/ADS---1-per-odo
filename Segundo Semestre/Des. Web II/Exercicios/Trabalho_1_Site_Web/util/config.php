@@ -7,6 +7,7 @@ define("DB_USER", "root");
 define("DB_PASSWORD", "");
 
 //Configurar variavel do diretorrio base da aplicação 
-define("BASE_URL","/trabalho2.0");
-define("LISTAGEM_JOGADORES","/trabalho2.0/view/jogadores/listar.php");
-define("TIMES_URL","/trabalho2.0");
+define("BASE_URL","/trabalho");
+define("LISTAGEM_JOGADORES", BASE_URL . "/view/jogadores/listar.php");
+define("CADASTRO_JOGADOR", BASE_URL . "/view/jogadores/inserir.php");
+define("TIMES_URL", BASE_URL . "/");

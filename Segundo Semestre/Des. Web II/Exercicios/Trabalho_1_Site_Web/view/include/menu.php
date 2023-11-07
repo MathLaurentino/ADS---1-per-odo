@@ -16,7 +16,7 @@ include_once(__DIR__ . "/../../util/config.php");
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navDropDown" data-toggle="dropdown">Cadastros</a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="<?= LISTAGEM_JOGADORES ?>">Jogadores</a>
+                <a class="dropdown-item" href="<?= CADASTRO_JOGADOR ?>">Jogadores</a>
                 <a class="dropdown-item" href="<?= TIMES_URL ?>">Times</a>
             </div>
         </li>
