@@ -17,6 +17,7 @@
                 <td>ID</td>
                 <td>Nome</td>
                 <td>Idade</td>
+                <td>Perna Dominante</td>
                 <td>Posicao</td>
                 <td>Time</td>
                 <td>Excluir</td>
@@ -29,6 +30,7 @@
                     <td><?= $j->getId()?></td>
                     <td><?= $j->getNome()?></td>
                     <td><?= $j->getIdade()?></td>
+                    <td><?= $j->getPerna_dominante_form()?></td>
                     <td><?= $j->getPosicao()?></td>
                     <td><?= $j->getTime() ?>
                     <td>

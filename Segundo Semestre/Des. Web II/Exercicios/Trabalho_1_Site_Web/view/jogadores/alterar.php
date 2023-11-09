@@ -8,6 +8,7 @@ if (isset($_POST["submetido"])) {
 
     $id = is_numeric($_POST["id"])? $_POST["id"] : null;
     $nome = trim($_POST["nome"]);
+    $perna_dominante = is_numeric($_POST["perna_dominante"])? $_POST["perna_dominante"] : null;
     $idade = is_numeric($_POST["idade"])? $_POST["idade"] : null;
     $fk_time = is_numeric($_POST["time"])? $_POST["time"] : null;
     $fk_posicao = is_numeric($_POST["posicao"])? $_POST["posicao"] : null;
@@ -16,6 +17,7 @@ if (isset($_POST["submetido"])) {
     $jogador->setId($id);
     $jogador->setIdade($idade);
     $jogador->setNome($nome);
+    $jogador->setPerna_dominante($perna_dominante);
 
     if ($fk_time) {
         $time = new Time();

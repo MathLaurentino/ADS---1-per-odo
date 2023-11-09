@@ -11,13 +11,14 @@ class JogadorDao{
     function inserirJogador(Jogador $jogador)
     {
         $conn=Connection::getConnection();
-        $sql="INSERT INTO jogador (nome, idade, fk_posicao, fk_time)"
-            ." VALUES(?,?,?,?)";
+        $sql="INSERT INTO jogador (nome, idade, perna_dominante, fk_posicao, fk_time)"
+            ." VALUES(?,?,?,?,?)";
 
         $sta=$conn->prepare($sql);
         $sta->execute(array(
             $jogador->getNome(), 
             $jogador->getIdade(), 
+            $jogador->getPerna_dominante(),
             $jogador->getPosicao()->getId(),
             $jogador->getTime()->getId()
         ));
@@ -69,6 +70,7 @@ class JogadorDao{
         $conn = Connection::getConnection();
         
         $sql = "UPDATE jogador SET nome = ?, idade = ?," . 
+                " perna_dominante = ?,".
                 " fk_posicao = ?, fk_time = ?" . 
                 " WHERE id = ?";
         
@@ -76,6 +78,7 @@ class JogadorDao{
         $stm->execute(array(
                 $jogador->getNome(), 
                 $jogador->getIdade(), 
+                $jogador->getPerna_dominante(),
                 $jogador->getPosicao()->getId(),
                 $jogador->getTime()->getId(),
                 $jogador->getId()
@@ -102,6 +105,7 @@ class JogadorDao{
             $jogador->setId($ar["id"]);
             $jogador->setNome($ar["nome"]);
             $jogador->setIdade($ar["idade"]);
+            $jogador->setPerna_dominante($ar["perna_dominante"]);
 
             $time = new Time();
             $time->setId($ar["fk_time"]);

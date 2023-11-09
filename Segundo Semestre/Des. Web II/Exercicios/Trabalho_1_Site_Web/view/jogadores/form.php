@@ -34,6 +34,31 @@
             </div>
 
             <div class="form-group">
+                <label for="inpIdade">Perna Dominante:</label> 
+            
+                <select name="perna_dominante" id="inpPosicao" class="form-control">
+                    <option value="">-- selecione --</option>
+                    <option value="1"
+                        <?php 
+                            echo (
+                                $jogador && $jogador->getPerna_dominante() == 
+                                1 ? "selected" : ""
+                            ) 
+                        ?>
+                    >Destro</option>
+
+                    <option value="2"
+                        <?php 
+                            echo (
+                                $jogador && $jogador->getPerna_dominante() == 
+                                2 ? "selected" : ""
+                            ) 
+                        ?>
+                    >Canhoto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="inpCurso">Posição:</label>
                 <select name="posicao" id="inpPosicao" class="form-control">
                     <option value="">-- selecione --</option>

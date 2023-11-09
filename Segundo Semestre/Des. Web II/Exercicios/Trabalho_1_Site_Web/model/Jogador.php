@@ -6,6 +6,7 @@ class Jogador{
     private ?int $id;
     private ?String  $nome;
     private ?int $idade;
+    private ?int $perna_dominante;
     private ?Time $time;
     private ?Posicao $posicao;
 
@@ -15,6 +16,7 @@ class Jogador{
         $this->time = null;
         $this->posicao = null;
         $this->id = 0;
+        $this->perna_dominante = 0;
     }
 
 
@@ -69,5 +71,19 @@ class Jogador{
         $this->time = $time;
     }
 
+    public function getPerna_dominante()
+    {
+        return $this->perna_dominante;
+    }
+    public function getPerna_dominante_form()
+    {
+        return ($this->perna_dominante == 1) ? "Destro" : "Canhoto";
+    }
+    public function setPerna_dominante($perna_dominante)
+    {
+        $this->perna_dominante = $perna_dominante;
+
+        return $this;
+    }
 }
 ?>
