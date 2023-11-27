@@ -3,16 +3,29 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+include_once(__DIR__ . "/../../controller/LoginController.php");
+
 $msgErro = "";
 $usuario = "";
 $senha = "";
 
 //Implementar a funcionalidade de login
-if (isset($_POST["submetido"])) {
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
-}
+if(isset($_POST['submetido'])) {
+    $usuario = trim($_POST['usuario']);
+    $senha = trim($_POST['senha']);
 
+    $loginCont = new LoginController();
+    $erros = $loginCont->logar($usuario, $senha);
+
+    if(!$erros) {
+        //Redireciona para a página inicial
+        header("location: " . URL_BASE);
+        exit;
+    }
+
+    //Se houver erros, mantém na mesma página e exibe-os
+    $msgErro = implode("<br>", $erros);
+}
 
 ?>
 

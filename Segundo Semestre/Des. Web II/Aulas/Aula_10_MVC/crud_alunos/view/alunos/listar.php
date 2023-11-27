@@ -33,7 +33,7 @@
                 <td><?= $a->getId(); ?></td>
                 <td><?= $a->getNome(); ?></td>
                 <td><?= $a->getIdade(); ?></td>
-                <td><?= $a->getEstrangeiroDesc($a->getEstrangeiro()); ?></td>
+                <td><?= $a->getEstrangeiroDesc(); ?></td>
                 <td><?= $a->getCurso(); ?></td>
                 <td> 
                     <a href="alterar.php?id=<?= $a->getId() ?>">

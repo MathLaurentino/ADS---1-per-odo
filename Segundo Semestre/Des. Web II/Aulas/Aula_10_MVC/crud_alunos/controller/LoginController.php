@@ -14,18 +14,33 @@ class LoginController {
     }
 
     public function logar($usuario, $senha) {
+        $erros = $this->loginService->validarDados($usuario, $senha);
+
+        if(!empty($erros)) {
+            return $erros;
+            exit;
+        }
         
+        $usuario = $this->usuarioDAO->findByLoginSenha($usuario, $senha);
+        if(! $usuario) {
+            return array("Usuário ou Senha inválidos!");
+            exit;
+        }
+
+        $this->loginService->salvarUsuarioSessao($usuario);
+
+        return array();
     }
 
     public function deslogar() {
-        
+        $this->loginService->excluirUsuarioSessao();
     }
 
     public function verificarUsuarioLogado() {
-        
+        return ($this->loginService->getNomeUsuarioSessao());
     }
 
     public function getNomeUsuario() {
-        
+        return $this->loginService->getNomeUsuarioSessao();
     }
 }
